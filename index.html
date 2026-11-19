@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amal Ahmed — UI/UX Designer</title>
+<meta name="description" content="Amal Ahmed, UI/UX designer in Cairo, Egypt. Twelve doors, one portfolio.">
+<link rel="icon" href="assets/avatar.jpg">
+<meta property="og:title" content="Amal Ahmed — UI/UX Designer">
+<meta property="og:description" content="Twelve doors, one portfolio. Case studies in mobile apps, landing pages and dashboards by Amal Ahmed, UI/UX designer in Cairo.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ECE4FA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@1&family=Unbounded:wght@600;800&family=Space+Mono:wght@400;700&family=Cairo:wght@400;600;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lilac:#ECE4FA; --lilac-2:#DED0F5; --lilac-3:#C9B3EE;
+  --plum:#4A1C5E; --plum-2:#6B3584; --plum-3:#8E5AA6;
+  --ink:#24102E; --white:#FFFFFF; --paper:#FCFAFF; --pink:#F4C6DA;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --num:"Unbounded",system-ui,sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  --mono:"Space Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--lilac);color:var(--ink);font-family:var(--display);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(236,228,250,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-weight:800;font-size:26px;letter-spacing:-.04em;color:var(--plum)}
+.links{display:flex;gap:36px;font-size:14px;font-weight:600;color:var(--plum)}
+.links a{opacity:.75;transition:opacity .2s}
+.links a:hover{opacity:1}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:11px 20px;font-weight:600;font-size:14px;transition:transform .2s,background .2s,color .2s;cursor:pointer;border:0;font-family:var(--display)}
+.pill:hover{transform:translateY(-2px)}
+.pill.solid{background:var(--plum);color:var(--white)}
+.pill.ghost{color:var(--plum);box-shadow:inset 0 0 0 1.5px var(--plum)}
+.pill.ghost:hover{background:var(--plum);color:var(--white)}
+
+/* hero */
+.hero{text-align:center;padding:40px 0 48px;position:relative}
+.hero .eyebrow{color:var(--plum-3);margin-bottom:22px}
+h1{font-weight:800;font-size:clamp(40px,6.6vw,92px);line-height:.95;letter-spacing:-.055em;max-width:16ch;margin:0 auto;color:var(--plum)}
+h1 em{font-size:1.08em;color:var(--plum-2)}
+.hero p.lede{max-width:440px;margin:24px auto 0;font-size:15px;line-height:1.55;color:rgba(36,16,46,.72)}
+.hero .ctas{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:30px}
+.progress{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;margin-left:10px;color:var(--plum)}
+.dots{display:flex;gap:4px}
+.dots i{width:8px;height:8px;border-radius:2px;box-shadow:inset 0 0 0 1.5px var(--plum);transition:background .3s}
+.dots i.on{background:var(--plum)}
+.progress a{text-decoration:underline;text-underline-offset:3px}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;z-index:-1;pointer-events:none}
+.blob.a{width:380px;height:380px;background:#D6B9F5;top:-60px;left:-80px}
+.blob.b{width:320px;height:320px;background:var(--pink);top:120px;right:-60px;opacity:.45}
+
+/* calendar */
+.calendar{display:grid;grid-template-columns:repeat(6,1fr);perspective:1600px;margin:8px auto 0;padding-bottom:120px;border-radius:18px}
+.cell{position:relative;aspect-ratio:1/1.08;background:var(--plum)}
+.cell:first-child{border-start-start-radius:18px}.cell:nth-child(6){border-start-end-radius:18px}
+.cell:nth-child(7){border-end-start-radius:18px}.cell:nth-child(12){border-end-end-radius:18px}
+.inside{position:absolute;inset:0;overflow:hidden;background:var(--plum);display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:var(--white);border-radius:inherit}
+.inside img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.inside::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,28,94,.2) 0%,rgba(74,28,94,.15) 35%,rgba(36,10,48,.94) 100%)}
+.inside > *:not(img){position:relative;z-index:1}
+.inside .n{position:absolute;top:12px;left:14px;font-family:var(--num);font-weight:800;font-size:22px;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.inside .eyebrow{font-size:9px;opacity:.85;margin-bottom:6px}
+.inside h3{font-size:clamp(14px,1.35vw,19px);line-height:1.1;letter-spacing:-.02em;font-weight:800}
+.inside p{font-size:11px;line-height:1.4;opacity:.85;margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.inside .go{margin-top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;display:inline-flex;gap:6px;align-items:center;background:var(--white);color:var(--plum);border-radius:999px;padding:6px 10px;align-self:flex-start;transition:background .2s}
+.inside:hover .go{background:var(--pink)}
+.cell.open .inside img{transform:scale(1)}
+
+.door{position:absolute;inset:0;transform-origin:50% 100%;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.3,.9,.25,1.05);cursor:pointer;z-index:2;border-radius:inherit}
+.door .front,.door .back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:inherit}
+.door .front{background:var(--paper);box-shadow:inset 0 0 0 1px rgba(74,28,94,.1);display:flex;align-items:center;justify-content:center;transition:background .3s;transform:translateZ(.1px)}
+.door:hover .front,.door:focus-visible .front{background:#fff}
+.door .front .big{font-family:var(--num);font-weight:800;color:var(--plum);font-size:clamp(46px,7vw,104px);letter-spacing:-.04em;line-height:1}
+.door .front .lab{position:absolute;left:14px;bottom:12px;font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--plum-3);text-transform:uppercase}
+.door .front .knob{position:absolute;right:14px;top:50%;width:7px;height:7px;border-radius:50%;background:var(--lilac-3)}
+.door .back{transform:rotateX(180deg);background:linear-gradient(180deg,var(--plum-2),var(--plum));display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7)}
+.door .back span{font-family:var(--serif);font-style:italic;font-size:22px;transform:rotate(180deg)}
+.cell.open{z-index:5}
+.cell.open .door{transform:rotateX(-148deg);pointer-events:none}
+.door:focus-visible{outline:3px solid var(--plum);outline-offset:-6px}
+.cell.peek .door{transform:rotateX(-12deg)}
+
+/* sections */
+section.block{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:54px;flex-wrap:wrap}
+h2{font-size:clamp(38px,5.2vw,76px);font-weight:800;letter-spacing:-.05em;line-height:.95;color:var(--plum)}
+h2 em{color:var(--plum-2)}
+
+/* about */
+#about{background:var(--white);border-radius:32px 32px 0 0}
+.about{display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start}
+.card{background:var(--lilac);border-radius:20px;padding:20px;transform:rotate(-2deg);box-shadow:0 30px 60px -20px rgba(74,28,94,.35)}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px}
+.card .meta{display:flex;justify-content:space-between;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--plum-3)}
+.card .name{font-family:var(--num);font-weight:800;font-size:22px;color:var(--plum);margin-top:8px}
+.avail{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:13px;font-weight:600;color:var(--plum)}
+.avail::before{content:"";width:8px;height:8px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 4px rgba(43,182,115,.2)}
+.about-text .eyebrow{color:var(--plum-3)}
+.about-text p{font-size:clamp(18px,1.8vw,24px);line-height:1.45;letter-spacing:-.01em;max-width:34ch}
+.about-text p + p{margin-top:18px;color:rgba(36,16,46,.7);font-size:16px;max-width:52ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;gap:12px}
+.stat{background:var(--lilac);border-radius:16px;padding:20px}
+.stat b{display:block;font-family:var(--num);font-weight:800;font-size:clamp(26px,3vw,42px);letter-spacing:-.04em;color:var(--plum)}
+.stat span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--plum-3)}
+
+/* process */
+#process{background:var(--plum);color:var(--white)}
+#process h2,#process h2 em{color:var(--white)}
+#process .eyebrow{color:var(--lilac-3)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:26px 22px 30px;border-radius:20px;min-height:260px;display:flex;flex-direction:column;transition:transform .3s,background .3s}
+.step:hover{transform:translateY(-6px);background:rgba(255,255,255,.12)}
+.step .sn{font-family:var(--num);font-weight:800;color:var(--pink);font-size:44px;line-height:1}
+.step h4{margin-top:auto;font-size:24px;font-weight:800;letter-spacing:-.03em}
+.step p{font-size:14px;line-height:1.5;opacity:.75;margin-top:8px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:36px;align-items:center}
+.tag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;padding:8px 14px}
+
+/* contact */
+.contact{text-align:center;padding:140px 0 120px}
+.contact .eyebrow{color:var(--plum-3)}
+.contact h2{font-size:clamp(56px,11vw,170px)}
+.contact p{max-width:440px;margin:24px auto 34px;color:rgba(36,16,46,.72);line-height:1.55}
+.contact .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{background:var(--plum);color:var(--lilac)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;height:72px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;gap:16px}
+footer .soc{display:flex;gap:22px}
+footer a:hover{text-decoration:underline}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+.nav-r{display:flex;align-items:center;gap:12px}
+.lang{font-weight:600;font-size:14px;color:var(--plum);padding:10px 14px;border-radius:999px;box-shadow:inset 0 0 0 1.5px rgba(74,28,94,.25);background:none;border:0;cursor:pointer;font-family:inherit;transition:background .2s}
+.lang:hover{background:var(--white)}
+.contact .ctas a[hidden]{display:none}
+/* Arabic / RTL */
+html[lang=ar] body{font-family:"IBM Plex Sans Arabic","Cairo",system-ui,sans-serif}
+html[lang=ar] body *{letter-spacing:0!important}
+html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] h4,html[lang=ar] .logo,html[lang=ar] .pill,html[lang=ar] .links{font-family:"Cairo",system-ui,sans-serif}
+html[lang=ar] h1{line-height:1.25;font-size:clamp(36px,5.6vw,80px)}
+html[lang=ar] h2{line-height:1.2}
+html[lang=ar] em{font-family:"Cairo",sans-serif;font-style:normal;font-weight:800}
+html[lang=ar] .eyebrow,html[lang=ar] .progress,html[lang=ar] .stat span,html[lang=ar] .card .meta,html[lang=ar] .tag,html[lang=ar] .door .front .lab,html[lang=ar] .inside .go,html[lang=ar] footer .wrap{font-family:"IBM Plex Sans Arabic",sans-serif;text-transform:none}
+html[lang=ar] .door .front .lab{font-size:11px;left:auto;right:14px}
+html[lang=ar] .door .front .knob{right:auto;left:14px}
+html[lang=ar] .inside .n{left:auto;right:14px}
+html[lang=ar] .progress{margin-left:0;margin-right:10px}
+html[lang=ar] .card{transform:rotate(2deg)}
+html[lang=ar] .about-text p{line-height:1.8}
+@media (max-width:980px){
+  .calendar{grid-template-columns:repeat(4,1fr)}
+  .cell{border-radius:0!important}
+  .about{grid-template-columns:1fr;gap:48px}
+  .card{max-width:320px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .links{display:none}
+  .calendar{grid-template-columns:repeat(3,1fr);padding-bottom:90px}
+  .door .front .lab{font-size:7px;left:8px;bottom:8px;letter-spacing:.12em}
+  .door .front .knob{display:none}
+  .inside{padding:10px}
+  .inside p,.inside .eyebrow{display:none}
+  .inside .go{font-size:8px;padding:4px 8px;margin-top:6px}
+  .inside .n{font-size:14px;top:8px;left:9px}
+  .inside h3{font-size:13px}
+  .progress{margin-left:0;width:100%;justify-content:center}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr}
+  .step{min-height:200px}
+  footer .wrap{flex-direction:column;justify-content:center;height:auto;padding:24px 16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo" data-i="logo">amal</a>
+    <div class="links">
+      <a href="#calendar" data-i="nWork">Work</a><a href="#about" data-i="nAbout">About</a><a href="#process" data-i="nProcess">Process</a><a href="#contact" data-i="nContact">Contact</a>
+    </div>
+    <div class="nav-r"><button class="lang" id="langBtn" type="button">العربية</button><a href="#contact" class="pill solid" data-i="talk">Let's Talk ↗</a></div>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <span class="blob a"></span><span class="blob b"></span>
+  <div class="eyebrow" data-i="eyebrow">12 doors · one portfolio</div>
+  <h1 data-i="h1" data-html>Hi, I'm <em>Amal,</em> a UI/UX designer with a curious mind.</h1>
+  <p class="lede" data-i="lede">Every door on my calendar hides one of my case studies. Hover over a door to peek inside — click it to open the full story.</p>
+  <div class="ctas">
+    <button class="pill solid" id="openAll" data-i="openAll">Open all doors</button>
+    <a href="#contact" class="pill ghost" data-i="talk2">Let's talk ↗</a>
+    <div class="progress"><span id="progText">0 of 12 doors opened</span><div class="dots" id="dots"></div></div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><div class="calendar" id="calendar"></div></div>
+
+  <section class="block" id="about">
+    <div class="wrap about">
+      <div class="card rv">
+        <img src="assets/avatar.jpg" alt="Portrait of Amal Ahmed">
+        <div class="name" data-i="name">Amal Ahmed</div>
+        <div class="meta"><span data-i="role">UI/UX designer</span><span data-i="city">Cairo, EG</span></div>
+        <div class="avail" data-i="avail">Available for freelance &amp; full-time</div>
+      </div>
+      <div class="about-text rv">
+        <span class="eyebrow" data-i="aboutEy">About me</span>
+        <h2 style="margin:14px 0 28px" data-i="aboutH" data-html>Designing with <em>care,</em> shipping with intent.</h2>
+        <p data-i="about1">I'm a UI/UX designer based in Cairo, Egypt, crafting mobile apps, landing pages and dashboards that feel simple to use and good to look at.</p>
+        <p data-i="about2">I always look forward to long-term relationships with my clients, and to giving them high-end, modern work they can be proud of. I'm here to serve my clients with my work — message me any time to talk about your project.</p>
+        <div class="stats">
+          <div class="stat"><b data-count="1779">0</b><span data-i="s1">Project views</span></div>
+          <div class="stat"><b data-count="175">0</b><span data-i="s2">Appreciations</span></div>
+          <div class="stat"><b data-count="129">0</b><span data-i="s3">Followers</span></div>
+          <div class="stat"><b>2021</b><span data-i="s4">On Behance since</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="process">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2 data-i="procH" data-html>How I <em>work</em></h2>
+        <span class="eyebrow" data-i="procEy">Design thinking, every project</span>
+      </div>
+      <div class="steps">
+        <div class="step rv"><span class="sn">01</span><h4 data-i="st1">Empathize</h4><p data-i="st1p">Stakeholder questions, user interviews, surveys and competitor analysis.</p></div>
+        <div class="step rv"><span class="sn">02</span><h4 data-i="st2">Define</h4><p data-i="st2p">Empathy maps, personas, problem statements, HMW questions and storyboards.</p></div>
+        <div class="step rv"><span class="sn">03</span><h4 data-i="st3">Ideate</h4><p data-i="st3p">Card sorting, priority matrix, information architecture and user flows.</p></div>
+        <div class="step rv"><span class="sn">04</span><h4 data-i="st4">Prototype</h4><p data-i="st4p">Design system, sketches, wireframes and high-fidelity prototypes.</p></div>
+      </div>
+      <div class="tools rv"><span class="eyebrow" style="margin-inline-end:8px" data-i="toolkit">Toolkit</span><span class="tag">Figma</span><span class="tag">Adobe Photoshop</span><span class="tag">Adobe XD</span><span class="tag">Miro</span><span class="tag" data-i="uxr">UX research</span></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap rv">
+      <span class="eyebrow" data-i="door13">Door 13 · Contact</span>
+      <h2 style="margin-top:18px" data-i="helloH" data-html>Say <em>hello.</em></h2>
+      <p data-i="helloP">Open for freelance projects and full-time roles. Let's build something people love to use.</p>
+      <div class="ctas">
+        <a class="pill solid" href="https://www.linkedin.com/in/amal-shaheen-33ba88283/" target="_blank" rel="noopener" data-i="cLinked">Connect on LinkedIn ↗</a>
+        <a class="pill ghost" href="https://www.behance.net/amalahmed30" target="_blank" rel="noopener" data-i="cBehance">Hire me on Behance ↗</a>
+        <a class="pill ghost" id="cvBtn" href="" download hidden data-i="cCv">Download CV ↓</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i="foot">© 2026 Amal Ahmed · Cairo, Egypt</span>
+    <div class="soc">
+      <a href="https://www.linkedin.com/in/amal-shaheen-33ba88283/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.behance.net/amalahmed30" target="_blank" rel="noopener">Behance</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/home.js"></script>
+</body>
+</html>
