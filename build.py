@@ -359,6 +359,7 @@ EXTRA = {
 from content_ar import AR, AR_META
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@1&family=Unbounded:wght@600;800&family=Space+Mono:wght@400;700&family=Cairo:wght@400;600;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">'
+SITE = "https://alaashaheen93.github.io/Amal-s-portoflio-/"  # live address, used for link previews
 LINKS = [("LinkedIn","https://www.linkedin.com/in/amal-shaheen-33ba88283/"),("Behance","https://www.behance.net/amalahmed30")]
 e = html.escape
 
@@ -477,7 +478,8 @@ def page(n, base, nxt_base, nn, lang):
 <meta name="description" content="{e(p["tagline"])}">
 <meta property="og:title" content="{e(p["title"])} — {"أمل أحمد" if lang=="ar" else "Amal Ahmed"}">
 <meta property="og:description" content="{e(p["tagline"])}">
-<meta property="og:image" content="../assets/cs/{folder}/01.jpg">
+<meta property="og:image" content="{SITE}assets/cs/{folder}/01.jpg">
+<meta property="og:url" content="{SITE}work/{href(p["slug"], lang)}">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="{other}" href="{href(p["slug"], other)}">
