@@ -1,0 +1,23 @@
+{
+  "name": "amal-portfolio",
+  "version": "1.0.0",
+  "description": "Amal Ahmed's UI/UX Design Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALAASHAHEEN93/Amal-s-portoflio-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALAASHAHEEN93/Amal-s-portoflio-/issues"
+  },
+  "homepage": "https://github.com/ALAASHAHEEN93/Amal-s-portoflio-#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
